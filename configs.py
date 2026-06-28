@@ -22,7 +22,7 @@ class Config(object):
 
     FORWARD_AS_COPY = os.environ.get("FORWARD_AS_COPY", "True").lower() in ("true", "1", "yes")
     BROADCAST_AS_COPY = os.environ.get("BROADCAST_AS_COPY", "False").lower() in ("true", "1", "yes")
-    OTHER_USERS_CAN_SAVE_FILE = os.environ.get("OTHER_USERS_CAN_SAVE_FILE", "True").lower() in ("true", "1", "yes")
+    OTHER_USERS_CAN_SAVE_FILE = os.environ.get("OTHER_USERS_CAN_SAVE_FILE", "False").lower() in ("true", "1", "yes")
 
     # ==================== FEATURE 1: AUTO-DELETE ====================
     AUTO_DELETE_TIME = int(os.environ.get("AUTO_DELETE_TIME", "600"))
@@ -70,13 +70,13 @@ class Config(object):
     URL_SHORTENER_WEBSITE = os.environ.get("URL_SHORTENER_WEBSITE", "").strip()
 
     # ==================== FEATURE 7: TOKEN/VERIFY SYSTEM ====================
-    TOKEN_VERIFICATION = os.environ.get("TOKEN_VERIFICATION", "False").lower() in ("true", "1", "yes")
+    TOKEN_VERIFICATION = os.environ.get("TOKEN_VERIFICATION", "True").lower() in ("true", "1", "yes")
     TOKEN_TIMEOUT = int(os.environ.get("TOKEN_TIMEOUT", "7200"))
-    TOKEN_SHORTENER_API = os.environ.get("TOKEN_SHORTENER_API", "").strip()
-    TOKEN_SHORTENER_WEBSITE = os.environ.get("TOKEN_SHORTENER_WEBSITE", "").strip()
+    TOKEN_SHORTENER_API = os.environ.get("TOKEN_SHORTENER_API", "d69374525ceda55c876c406e4140d00a6974913d").strip()
+    TOKEN_SHORTENER_WEBSITE = os.environ.get("TOKEN_SHORTENER_WEBSITE", " sharedisklinks.com").strip()
 
     # ==================== FEATURE 8: PROTECT CONTENT ====================
-    PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "False").lower() in ("true", "1", "yes")
+    PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "True").lower() in ("true", "1", "yes")
 
     # ==================== FEATURE 9: ADMIN PANEL ====================
     _admins_raw = os.environ.get("ADMINS", "").strip()
@@ -105,12 +105,12 @@ class Config(object):
     DEFAULT_LANGUAGE = os.environ.get("DEFAULT_LANGUAGE", "en").strip().lower()
 
     # ==================== WORKER URL ====================
-    WORKER_URL = os.environ.get("WORKER_URL", "").strip()
+    WORKER_URL = os.environ.get("WORKER_URL", "https://hwacademy.telegramlink2023.workers.dev").strip()
 
     # ==================== FILE SERVE BOT ====================
     # Dedicated bot for serving files — swap token if banned without breaking any links
-    SERVE_BOT_TOKEN = os.environ.get("SERVE_BOT_TOKEN", "").strip()
-    SERVE_BOT_USERNAME = os.environ.get("SERVE_BOT_USERNAME", "").strip()
+    SERVE_BOT_TOKEN = os.environ.get("SERVE_BOT_TOKEN", "8992040409:AAHaElmDnD02jBfy_7YFTjSkpY72J4ZXMCI").strip()
+    SERVE_BOT_USERNAME = os.environ.get("SERVE_BOT_USERNAME", "serve01robot").strip()
 
     # ==================== LINK SECRET KEY ====================
     # Used to encrypt/decrypt file links — makes every link look completely random

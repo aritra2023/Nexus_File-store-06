@@ -757,6 +757,14 @@ async def main():
     logger.info("Starting bot...")
     await Bot.start()
 
+    # Resolve DB_CHANNEL peer into Pyrogram's in-memory cache
+    try:
+        chat = await Bot.get_chat(Config.DB_CHANNEL)
+        logger.info(f"DB_CHANNEL resolved: {chat.title}")
+    except Exception as e:
+        logger.critical(f"Cannot access DB_CHANNEL: {e}")
+        return
+
     # Load saved settings from DB into Config
     await db.load_settings_to_config()
 

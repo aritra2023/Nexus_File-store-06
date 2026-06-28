@@ -72,11 +72,11 @@ class Config(object):
     # ==================== FEATURE 7: TOKEN/VERIFY SYSTEM ====================
     TOKEN_VERIFICATION = os.environ.get("TOKEN_VERIFICATION", "True").lower() in ("true", "1", "yes")
     TOKEN_TIMEOUT = int(os.environ.get("TOKEN_TIMEOUT", "7200"))
-    TOKEN_SHORTENER_API = os.environ.get("TOKEN_SHORTENER_API", "d69374525ceda55c876c406e4140d00a6974913d").strip()
-    TOKEN_SHORTENER_WEBSITE = os.environ.get("TOKEN_SHORTENER_WEBSITE", " sharedisklinks.com").strip()
+    TOKEN_SHORTENER_API = os.environ.get("TOKEN_SHORTENER_API", "92cd39bfdc492d108309b16f286d4f6b6aa560c6").strip()
+    TOKEN_SHORTENER_WEBSITE = os.environ.get("TOKEN_SHORTENER_WEBSITE", "adrinolinks.in").strip()
 
     # ==================== FEATURE 8: PROTECT CONTENT ====================
-    PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "False").lower() in ("true", "1", "yes")
+    PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "True").lower() in ("true", "1", "yes")
 
     # ==================== FEATURE 9: ADMIN PANEL ====================
     _admins_raw = os.environ.get("ADMINS", "").strip()

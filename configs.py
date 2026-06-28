@@ -76,7 +76,7 @@ class Config(object):
     TOKEN_SHORTENER_WEBSITE = os.environ.get("TOKEN_SHORTENER_WEBSITE", " sharedisklinks.com").strip()
 
     # ==================== FEATURE 8: PROTECT CONTENT ====================
-    PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "True").lower() in ("true", "1", "yes")
+    PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "False").lower() in ("true", "1", "yes")
 
     # ==================== FEATURE 9: ADMIN PANEL ====================
     _admins_raw = os.environ.get("ADMINS", "").strip()
